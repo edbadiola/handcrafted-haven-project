@@ -1,3 +1,3 @@
 Handcradted Haven App
 
-URL: https://project-badiola.vercel.app/
+URL: https://handcrafted-haven-project-eta.vercel.app/
