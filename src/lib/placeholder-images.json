@@ -1,0 +1,118 @@
+{
+  "placeholderImages": [
+    {
+      "id": "avatar-1",
+      "description": "Avatar for Elena Vance",
+      "imageUrl": "https://images.unsplash.com/photo-1557053908-4793c484d06f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8d29tYW4lMjBwb3J0cmFpdHxlbnwwfHx8fDE3NjkzMTQwMDR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "woman portrait"
+    },
+    {
+      "id": "avatar-2",
+      "description": "Avatar for Marcus Thorne",
+      "imageUrl": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtYW4lMjBwb3J0cmFpdHxlbnwwfHx8fDE3NjkyMjQ4NjZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "man portrait"
+    },
+    {
+      "id": "avatar-3",
+      "description": "Avatar for Anya Petrova",
+      "imageUrl": "https://images.unsplash.com/photo-1554727242-741c14fa561c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHx3b21hbiUyMHNtaWxpbmd8ZW58MHx8fHwxNzY5MzIzOTA4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "woman smiling"
+    },
+    {
+      "id": "avatar-4",
+      "description": "Avatar for Kenji Tanaka",
+      "imageUrl": "https://images.unsplash.com/photo-1609817482305-222c7d90ab06?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxtYW4lMjBjcmFmdHNtYW58ZW58MHx8fHwxNzY5MzQwOTU3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "man craftsman"
+    },
+    {
+      "id": "prod-1-1",
+      "description": "Ceramic Vase Image 1",
+      "imageUrl": "https://images.unsplash.com/photo-1631125915732-b98f8774f675?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxjZXJhbWljJTIwdmFzZXxlbnwwfHx8fDE3NjkzNDA5NTd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "ceramic vase"
+    },
+    {
+      "id": "prod-1-2",
+      "description": "Ceramic Vase Image 2",
+      "imageUrl": "https://images.unsplash.com/photo-1761210719325-283557e92487?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxwb3R0ZXJ5JTIwZGV0YWlsfGVufDB8fHx8MTc2OTM0MDk1N3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "pottery detail"
+    },
+    {
+      "id": "prod-2-1",
+      "description": "Silver Locket Image 1",
+      "imageUrl": "https://images.unsplash.com/photo-1705326453273-1c35d7dad309?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxzaWx2ZXIlMjBsb2NrZXR8ZW58MHx8fHwxNzY5MzQwOTU3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "silver locket"
+    },
+    {
+      "id": "prod-3-1",
+      "description": "Woven Blanket Image 1",
+      "imageUrl": "https://images.unsplash.com/photo-1728931709934-0fccffe7d19e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHx3b3ZlbiUyMGJsYW5rZXR8ZW58MHx8fHwxNzY5MzQwOTU3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "woven blanket"
+    },
+    {
+      "id": "prod-4-1",
+      "description": "Walnut Bowl Image 1",
+      "imageUrl": "https://images.unsplash.com/photo-1740993384893-8163a2075022?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHx3b29kZW4lMjBib3dsfGVufDB8fHx8MTc2OTM0MDk1N3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "wooden bowl"
+    },
+    {
+      "id": "prod-5-1",
+      "description": "Stoneware Mug Set Image 1",
+      "imageUrl": "https://images.unsplash.com/photo-1766848482243-4379ac576b1d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxzdG9uZXdhcmUlMjBtdWdzfGVufDB8fHx8MTc2OTM0MDk1N3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "stoneware mugs"
+    },
+    {
+      "id": "prod-6-1",
+      "description": "Turquoise Ring Image 1",
+      "imageUrl": "https://images.unsplash.com/photo-1762237257993-ecd1e57d946e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHx0dXJxdW9pc2UlMjByaW5nfGVufDB8fHx8MTc2OTM0MDk1N3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "turquoise ring"
+    },
+    {
+      "id": "prod-7-1",
+      "description": "Linen Scarf Image 1",
+      "imageUrl": "https://images.unsplash.com/photo-1638256049278-0899dbe29aec?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxsaW5lbiUyMHNjYXJmfGVufDB8fHx8MTc2OTM0MDk1N3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "linen scarf"
+    },
+    {
+      "id": "prod-8-1",
+      "description": "Oak Cutting Board Image 1",
+      "imageUrl": "https://images.unsplash.com/photo-1628006203055-b4aa5f6300f3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxjdXR0aW5nJTIwYm9hcmR8ZW58MHx8fHwxNzY5MzQwOTU3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "cutting board"
+    },
+    {
+      "id": "prod-9-1",
+      "description": "Porcelain Dinner Plate",
+      "imageUrl": "https://images.unsplash.com/photo-1763506240757-a8a33ca2c26f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8cG9yY2VsYWluJTIwcGxhdGV8ZW58MHx8fHwxNzY5MzQwOTU3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "porcelain plate"
+    },
+    {
+      "id": "prod-10-1",
+      "description": "Gold Leaf Earrings",
+      "imageUrl": "https://images.unsplash.com/photo-1723802205505-2f88b2227718?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxnb2xkJTIwZWFycmluZ3N8ZW58MHx8fHwxNzY5MzA4MjczfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "gold earrings"
+    },
+    {
+      "id": "prod-11-1",
+      "description": "Hand-dyed Silk Pillow",
+      "imageUrl": "https://images.unsplash.com/photo-1606796913629-e870d68d4535?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxzaWxrJTIwcGlsbG93fGVufDB8fHx8MTc2OTM0MDk1N3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "silk pillow"
+    },
+    {
+      "id": "prod-12-1",
+      "description": "Cherry Wood Coasters",
+      "imageUrl": "https://images.unsplash.com/photo-1611841528417-6227ffbca5ee?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHx3b29kJTIwY29hc3RlcnN8ZW58MHx8fHwxNzY5MzQwOTU3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "wood coasters"
+    },
+    {
+      "id": "prod-13-1",
+      "description": "Glazed Ceramic Bowl",
+      "imageUrl": "https://images.unsplash.com/photo-1505168125389-77678147a9d1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxjZXJhbWljJTIwYm93bHxlbnwwfHx8fDE3NjkyNjk3NDR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "ceramic bowl"
+    },
+    {
+      "id": "prod-14-1",
+      "description": "Leather-bound Journal",
+      "imageUrl": "https://images.unsplash.com/photo-1668029448943-287233ed0124?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxsZWF0aGVyJTIwam91cm5hbHxlbnwwfHx8fDE3NjkyNzk1OTR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "leather journal"
+    }
+  ]
+}
