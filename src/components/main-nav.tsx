@@ -7,7 +7,6 @@ import { cn } from "@/lib/utils";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Button } from "./ui/button";
 import { Menu, Sparkles } from "lucide-react";
-import { sellers } from "@/lib/data";
 
 export function MainNav() {
   const pathname = usePathname();
@@ -20,9 +19,14 @@ export function MainNav() {
       active: pathname === `/`,
     },
     {
-      href: `/sellers/${sellers[0].id}`,
-      label: "Our Artisans",
+      href: `/sellers`,
+      label: "Discover our Artisan",
       active: pathname.startsWith(`/sellers`),
+    },
+    {
+      href: `/about`,
+      label: "About",
+      active: pathname === `/about`,
     },
   ];
 

@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { MainNav } from "@/components/main-nav";
-import { Button } from "@/components/ui/button";
-import { Sparkles, ShoppingCart } from "lucide-react";
+import { Sparkles } from "lucide-react";
 
 export function SiteHeader() {
   return (
@@ -15,10 +14,6 @@ export function SiteHeader() {
         </Link>
         <div className="flex flex-1 items-center justify-end space-x-4">
           <MainNav />
-          <Button variant="ghost" size="icon">
-            <ShoppingCart className="h-5 w-5" />
-            <span className="sr-only">Shopping Cart</span>
-          </Button>
         </div>
       </div>
     </header>

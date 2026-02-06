@@ -9,7 +9,7 @@ import {
 } from '@/components/ui/sidebar';
 import { AppSidebar } from '@/components/app-sidebar';
 import { Button } from '@/components/ui/button';
-import { ShoppingCart, Sparkles } from 'lucide-react';
+import { Sparkles } from 'lucide-react';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
@@ -46,10 +46,6 @@ export default function RootLayout({
                   <Sparkles className="h-6 w-6" />
                   Handcrafted Haven
               </Link>
-              <Button variant="ghost" size="icon">
-                <ShoppingCart className="h-5 w-5" />
-                <span className="sr-only">Shopping Cart</span>
-              </Button>
             </header>
             <main className="flex-1">{children}</main>
           </SidebarInset>

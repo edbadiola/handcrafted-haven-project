@@ -13,8 +13,7 @@ import {
   SidebarSeparator,
 } from '@/components/ui/sidebar';
 import { Button } from '@/components/ui/button';
-import { Sparkles, Home, Users, LogIn, LogOut, ShoppingCart } from 'lucide-react';
-import { sellers } from '@/lib/data';
+import { Sparkles, Home, Users, LogIn, UserPlus, Info } from 'lucide-react';
 
 export function AppSidebar() {
   const pathname = usePathname();
@@ -27,10 +26,16 @@ export function AppSidebar() {
       active: pathname === `/`,
     },
     {
-      href: `/sellers/${sellers[0].id}`,
-      label: 'Our Artisans',
+      href: `/sellers`,
+      label: 'Discover our Artisan',
       icon: Users,
       active: pathname.startsWith(`/sellers`),
+    },
+    {
+      href: `/about`,
+      label: 'About',
+      icon: Info,
+      active: pathname === `/about`,
     },
   ];
 
@@ -60,22 +65,20 @@ export function AppSidebar() {
               </SidebarMenuButton>
             </SidebarMenuItem>
           ))}
-            <SidebarMenuItem>
-                <SidebarMenuButton tooltip={{ children: 'Cart' }}>
-                    <ShoppingCart />
-                    <span>Cart</span>
-                </SidebarMenuButton>
-            </SidebarMenuItem>
         </SidebarMenu>
       </SidebarContent>
       <SidebarFooter>
         <SidebarSeparator />
         <div className="flex flex-col gap-2">
-            <Button variant="default" className="w-full justify-start gap-2">
-                <LogIn /> <span>Sign In</span>
+            <Button variant="default" className="w-full justify-start gap-2" asChild>
+                <Link href="/login">
+                    <LogIn /> <span>Sign In</span>
+                </Link>
             </Button>
-            <Button variant="outline" className="w-full justify-start gap-2">
-                <LogOut /> <span>Sign Out</span>
+            <Button variant="outline" className="w-full justify-start gap-2" asChild>
+                <Link href="/create-account">
+                    <UserPlus /> <span>Create Account</span>
+                </Link>
             </Button>
         </div>
       </SidebarFooter>

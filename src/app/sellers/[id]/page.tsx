@@ -4,7 +4,7 @@ import { sellers, products as allProducts } from '@/lib/data';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { ProductCard } from '@/components/product-card';
-import { Sparkles } from 'lucide-react';
+import { User } from 'lucide-react';
 import { Separator } from '@/components/ui/separator';
 
 async function getSellerData(id: string) {
@@ -31,12 +31,10 @@ export default async function SellerPage({ params }: { params: { id: string } })
         <div className="container mx-auto px-4 py-8">
             <div className="flex flex-col md:flex-row items-center md:items-start gap-8 md:gap-12 mb-12">
                 <Avatar className="h-32 w-32 md:h-40 md:w-40 border-4 border-card shadow-lg">
-                    {avatar ? (
-                        <AvatarImage src={avatar.imageUrl} alt={seller.name} data-ai-hint={avatar.imageHint} />
-                    ) : (
-                        <Sparkles className="w-16 h-16 text-muted-foreground" />
-                    )}
-                    <AvatarFallback>{seller.name.charAt(0)}</AvatarFallback>
+                    {avatar && <AvatarImage src={avatar.imageUrl} alt={seller.name} data-ai-hint={avatar.imageHint} />}
+                    <AvatarFallback>
+                       <User className="w-16 h-16 text-muted-foreground" />
+                    </AvatarFallback>
                 </Avatar>
                 <div className="flex-1 text-center md:text-left">
                     <h1 className="font-headline text-4xl md:text-5xl font-bold">{seller.name}</h1>

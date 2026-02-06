@@ -15,7 +15,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { StarRating } from "@/components/star-rating";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Sparkles } from "lucide-react";
+import { User } from "lucide-react";
 import { ReviewForm } from "@/components/review-form";
 
 async function getProductData(id: string) {
@@ -106,9 +106,9 @@ export default async function ProductPage({ params }: { params: { id: string } }
               <Card key={review.id}>
                 <CardHeader className="flex flex-row items-start gap-4">
                   <Avatar>
-                    <div className="relative h-full w-full aspect-square bg-muted rounded-full flex items-center justify-center">
-                        <Sparkles className="w-5 h-5 text-muted-foreground" />
-                    </div>
+                    <AvatarFallback>
+                        <User className="w-5 h-5 text-muted-foreground" />
+                    </AvatarFallback>
                   </Avatar>
                   <div className="flex-1">
                     <div className="flex justify-between items-start">
