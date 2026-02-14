@@ -11,6 +11,7 @@ import { AppSidebar } from '@/components/app-sidebar';
 import { Button } from '@/components/ui/button';
 import { Sparkles } from 'lucide-react';
 import Link from 'next/link';
+import { AppProvider } from '@/context/app-context';
 
 export const metadata: Metadata = {
   title: 'Handcrafted Haven',
@@ -37,20 +38,22 @@ export default function RootLayout({
           'min-h-screen bg-background font-body text-foreground antialiased'
         )}
       >
-        <SidebarProvider>
-          <AppSidebar />
-          <SidebarInset>
-            <header className="sticky top-0 z-30 flex h-14 items-center justify-between gap-4 border-b bg-background/80 px-4 backdrop-blur-sm md:hidden">
-              <SidebarTrigger />
-              <Link href="/" className="flex items-center gap-2 font-bold font-headline">
-                  <Sparkles className="h-6 w-6" />
-                  Handcrafted Haven
-              </Link>
-            </header>
-            <main className="flex-1">{children}</main>
-          </SidebarInset>
-        </SidebarProvider>
-        <Toaster />
+        <AppProvider>
+          <SidebarProvider>
+            <AppSidebar />
+            <SidebarInset>
+              <header className="sticky top-0 z-30 flex h-14 items-center justify-between gap-4 border-b bg-background/80 px-4 backdrop-blur-sm md:hidden">
+                <SidebarTrigger />
+                <Link href="/" className="flex items-center gap-2 font-bold font-headline">
+                    <Sparkles className="h-6 w-6" />
+                    Handcrafted Haven
+                </Link>
+              </header>
+              <main className="flex-1">{children}</main>
+            </SidebarInset>
+          </SidebarProvider>
+          <Toaster />
+        </AppProvider>
       </body>
     </html>
   );

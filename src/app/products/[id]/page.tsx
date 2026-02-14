@@ -1,8 +1,10 @@
+'use client';
+
+import { use, useMemo } from 'react';
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { products, reviews as allReviews, sellers } from "@/lib/data";
-import { PlaceHolderImages } from "@/lib/placeholder-images";
+import { sellers, reviews as allReviews } from "@/lib/data";
 import {
   Carousel,
   CarouselContent,
@@ -10,35 +12,27 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { StarRating } from "@/components/star-rating";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { User } from "lucide-react";
 import { ReviewForm } from "@/components/review-form";
+import { AddToCartButton } from "@/components/add-to-cart-button";
+import { useAppContext } from "@/context/app-context";
 
-async function getProductData(id: string) {
-  const product = products.find((p) => p.id === id);
-  if (!product) return null;
+export default function ProductPage({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = use(params);
+  const { products } = useAppContext();
+  
+  const product = useMemo(() => products.find((p) => p.id === id), [products, id]);
 
-  const seller = sellers.find((s) => s.id === product.sellerId);
-  const reviews = allReviews.filter((r) => r.productId === id);
-  const images = PlaceHolderImages.filter((img) => product.imageIds.includes(img.id));
-  const sellerAvatar = PlaceHolderImages.find(p => p.id === seller?.avatarId);
-
-
-  return { product, seller, reviews, images, sellerAvatar };
-}
-
-export default async function ProductPage({ params }: { params: { id: string } }) {
-  const data = await getProductData(params.id);
-
-  if (!data) {
+  if (!product) {
     notFound();
   }
 
-  const { product, seller, reviews, images, sellerAvatar } = data;
+  const seller = sellers.find((s) => s.id === product.sellerId);
+  const reviews = allReviews.filter((r) => r.productId === product.id);
   
   const averageRating = reviews.length > 0
     ? reviews.reduce((acc, r) => acc + r.rating, 0) / reviews.length
@@ -50,16 +44,15 @@ export default async function ProductPage({ params }: { params: { id: string } }
         <div className="md:sticky top-24 self-start">
           <Carousel className="w-full">
             <CarouselContent>
-              {images.map((image, index) => (
+              {product.imageUrls.map((imageUrl, index) => (
                 <CarouselItem key={index}>
                   <Card className="overflow-hidden">
                     <div className="relative aspect-square w-full">
                       <Image
-                        src={image.imageUrl}
+                        src={imageUrl}
                         alt={`${product.name} image ${index + 1}`}
                         fill
                         className="object-cover"
-                        data-ai-hint={image.imageHint}
                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       />
                     </div>
@@ -92,7 +85,7 @@ export default async function ProductPage({ params }: { params: { id: string } }
             <p>{product.description}</p>
           </article>
 
-          <Button size="lg" className="w-full mt-6 bg-accent hover:bg-accent/90 text-accent-foreground">Add to Cart</Button>
+          <AddToCartButton product={product} />
         </div>
       </div>
 

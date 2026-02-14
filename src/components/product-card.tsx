@@ -8,28 +8,25 @@ import {
   CardHeader,
 } from "@/components/ui/card";
 import { StarRating } from "./star-rating";
-import { PlaceHolderImages } from "@/lib/placeholder-images";
-import { cn } from "@/lib/utils";
 
 interface ProductCardProps {
   product: Product;
 }
 
 export function ProductCard({ product }: ProductCardProps) {
-  const image = PlaceHolderImages.find((img) => img.id === product.imageIds[0]);
+  const imageUrl = product.imageUrls && product.imageUrls.length > 0 ? product.imageUrls[0] : null;
 
   return (
     <Card className="flex flex-col overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
       <Link href={`/products/${product.id}`} className="flex-grow">
         <CardHeader className="p-0">
           <div className="relative aspect-square w-full">
-            {image ? (
+            {imageUrl ? (
               <Image
-                src={image.imageUrl}
+                src={imageUrl}
                 alt={product.name}
                 fill
                 className="object-cover"
-                data-ai-hint={image.imageHint}
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               />
             ) : (

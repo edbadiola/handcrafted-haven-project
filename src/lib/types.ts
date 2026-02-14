@@ -15,7 +15,7 @@ export type Product = {
   name: string;
   description: string;
   price: number;
-  imageIds: ImagePlaceholder['id'][];
+  imageUrls: string[];
   sellerId: string;
   category: ProductCategory;
   rating: number;
@@ -31,3 +31,12 @@ export type Review = {
   comment: string;
   date: string;
 };
+
+// User type for local auth
+export type User = {
+  id: string;
+  displayName: string;
+  email: string;
+  password?: string; // Only stored for local auth simulation
+  avatarUrl?: string;
+}

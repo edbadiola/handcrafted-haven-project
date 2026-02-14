@@ -1,37 +1,37 @@
+'use client';
 import { notFound } from 'next/navigation';
-import Image from 'next/image';
-import { sellers, products as allProducts } from '@/lib/data';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import { use, useMemo } from 'react';
+import { sellers } from '@/lib/data';
+import { Avatar, AvatarFallback } from '@/components/ui/avatar';
 import { ProductCard } from '@/components/product-card';
 import { User } from 'lucide-react';
 import { Separator } from '@/components/ui/separator';
+import { useAppContext } from '@/context/app-context';
 
-async function getSellerData(id: string) {
-    const seller = sellers.find(s => s.id === id);
-    if (!seller) return null;
+export default function SellerPage({ params }: { params: Promise<{ id: string }> }) {
+    const { id } = use(params);
+    const { products: allProducts } = useAppContext();
 
-    const products = allProducts.filter(p => p.sellerId === id);
-    const avatar = PlaceHolderImages.find(img => img.id === seller.avatarId);
+    const data = useMemo(() => {
+        const seller = sellers.find(s => s.id === id);
+        if (!seller) return null;
 
-    return { seller, products, avatar };
-}
+        const products = allProducts.filter(p => p.sellerId === id);
 
+        return { seller, products };
+    }, [id, allProducts]);
 
-export default async function SellerPage({ params }: { params: { id: string } }) {
-    const data = await getSellerData(params.id);
 
     if (!data) {
         notFound();
     }
 
-    const { seller, products, avatar } = data;
+    const { seller, products } = data;
 
     return (
         <div className="container mx-auto px-4 py-8">
             <div className="flex flex-col md:flex-row items-center md:items-start gap-8 md:gap-12 mb-12">
                 <Avatar className="h-32 w-32 md:h-40 md:w-40 border-4 border-card shadow-lg">
-                    {avatar && <AvatarImage src={avatar.imageUrl} alt={seller.name} data-ai-hint={avatar.imageHint} />}
                     <AvatarFallback>
                        <User className="w-16 h-16 text-muted-foreground" />
                     </AvatarFallback>

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo, useEffect } from "react";
+import { useState, useMemo } from "react";
 import { ProductCard } from "@/components/product-card";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -12,19 +12,14 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Slider } from "@/components/ui/slider";
-import { products as allProducts, categories } from "@/lib/data";
-import type { Product } from "@/lib/types";
+import { categories } from "@/lib/data";
 import { Label } from "@/components/ui/label";
+import { useAppContext } from "@/context/app-context";
 
 export default function BrowsePage() {
-  const [products, setProducts] = useState<Product[]>([]);
+  const { products } = useAppContext();
   const [category, setCategory] = useState<string>("all");
   const [priceRange, setPriceRange] = useState<[number]>([500]);
-
-  useEffect(() => {
-    // Simulate fetching data
-    setProducts(allProducts);
-  }, []);
 
   const filteredProducts = useMemo(() => {
     return products
